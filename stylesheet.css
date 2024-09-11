@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#product-list {
+    padding:10px;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.product {
+    border: 1px solid #0e0000;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    padding-bottom: 10px;
+
+}
+
+.product h2{
+    margin-top: 0;
+}
+
+/* Pseudo-classes for link behavior and order with errors */
+.product a {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited{
+    color: purple;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Clear floats to avoid parent collapse */
+#product-list::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Please use google to find out what this block of code is and why it is being used in this code */
+
+@media (max-width:480px){
+    #product-list{
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width:768px){
+    #product-list{
+        grid-template-columns: auto auto;
+    }
+}
